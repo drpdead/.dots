@@ -1,0 +1,157 @@
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# General
+# -----------------------------------------------------
+alias c='clear'
+alias nf='fastfetch'
+alias pf='fastfetch'
+alias ff='fastfetch'
+alias ls='eza -a --icons=always'
+alias ll='eza -al --icons=always'
+alias lt='eza -a --tree --level=1 --icons=always'
+alias shutdown='systemctl poweroff'
+alias v='$EDITOR'
+alias vim='$EDITOR'
+alias ts='~/.config/ml4w/scripts/snapshot.sh'
+alias wifi='nmtui'
+alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+
+# -----------------------------------------------------
+# ML4W Apps
+# -----------------------------------------------------
+alias ml4w='com.ml4w.welcome'
+alias ml4w-settings='com.ml4w.dotfilessettings'
+alias ml4w-hyprland='com.ml4w.hyprland.settings'
+alias ml4w-options='ml4w-hyprland-setup -m options'
+alias ml4w-sidebar='ags toggle sidebar'
+alias ml4w-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
+alias ml4w-hyprland-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
+alias ml4w-qtile-diagnosis='~/.config/ml4w/qtile/scripts/diagnosis.sh'
+alias ml4w-update='~/.config/ml4w/update.sh'
+alias ...="cd ../../"
+
+# -----------------------------------------------------
+# Window Managers
+# -----------------------------------------------------
+
+alias Qtile='startx'
+# Hyprland with Hyprland
+
+# -----------------------------------------------------
+# Scripts
+# -----------------------------------------------------
+alias ascii='~/.config/ml4w/scripts/figlet.sh'
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias update-sysd='mkinitcpio -P'
+
+# -----------------------------------------------------
+# Qtile
+# -----------------------------------------------------
+alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
+alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
+alias setkb='setxkbmap de;echo "Keyboard set back to de."'
+## aliases ##
+alias -g edge='/usr/bin/microsoft-edge-stable'
+alias -g msedge='com.microsoft.Edge'
+alias -s conf=micro
+alias -s html=edge
+alias -s org=edge
+alias -s net=edge
+alias -s png=krita
+alias -s zsh=nvim
+alias -s zshrc=nvim
+alias -s local=nvim
+alias -s kra=krita
+alias -s py=nvim
+alias -s zip=Xarchiver
+alias -s tar=Xarchiver
+## translate
+alias u='translate -i'
+## ignore ~/.ssh/known_hosts entries
+alias insecssh='ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null" -o "PreferredAuthentications=keyboard-interactive"'
+## instead of global aliase it might be better to use grmls $abk assoc array, whose contents are expanded after pressing ,. ctrl-x
+alias -g ls='lsd '
+alias -g SnL="| sort -n | less"
+alias -g SL="| sort | less"
+alias -g L="| less"
+alias -g NL=">/dev/null"
+alias -g nV="| nvim -"
+alias -g eM="| emacs -"
+alias -g t10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g CA="2>&1 | cat -A"
+alias -g C='| wc -l'
+alias -g D="DISPLAY=:0.0"
+alias -g DN=/dev/null
+alias -g ED="export DISPLAY=:0.0"
+alias -g EG='|& egrep'
+alias -g EH='|& head'
+alias -g EL='|& less'
+alias -g ELS='|& less -S'
+alias -g ETL='|& tail -20'
+alias -g ET='|& tail'
+alias -g F=' | fmt -'
+alias -g G='| egrep'
+alias -g H='| head'
+alias -g HL='|& head -20'
+alias -g Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)"
+alias -g LL="2>&1 | less"
+alias -g L="| less"
+alias -g LS='| less -S'
+alias -g MM='| most'
+alias -g M='| more'
+alias -g NE="2> /dev/null"
+alias -g NS='| sort -n'
+alias -g NUL="> /dev/null 2>&1"
+alias -g PIPE='|'
+alias -g R=' > /c/aaa/tee.txt '
+alias -g RNS='| sort -nr'
+alias -g S='| sort'
+alias -g TL='| tail -20'
+alias -g T='| tail'
+alias -g US='| sort -u'
+alias -g VM=/var/log/messages
+alias -g X0G='| xargs -0 egrep'
+alias -g X0='| xargs -0'
+alias -g XG='| xargs egrep'
+alias -g X='| xargs'## get top 10 shell commands:
+alias top10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+alias -g NL='>/dev/null'
+## Execute \kbd{./configure}
+alias CO="./configure"
+## Execute \kbd{./configure --help}
+alias CH="./configure --help"
+alias -s pl='perl -S'
+
+alias make="make -j`nproc`"
+alias ninja="ninja -j`nproc`"
+alias n="ninja"
+alias c="clear"
+alias rmpkg="sudo pacman -Rsn"
+alias cleanch="sudo pacman -Scc"
+alias fixpacman="sudo rm /var/lib/pacman/db.lck"
+alias update="sudo pacman -Syu"
+
+# Help people new to Arch
+alias apt="man pacman"
+alias apt-get="man pacman"
+alias please="sudo"
+alias tb="nc termbin.com 9999"
+
+# Cleanup orphaned packages
+alias cleanup="sudo pacman -Rsn (pacman -Qtdq)"
+
+# Get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+# Recent installed packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
